@@ -1,0 +1,117 @@
+/* Base Styles (Light by default using CSS variables if preferred) */
+.categories-page {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #fff;
+  color: #222;
+  line-height: 1.7;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #000000;
+  font-weight: 600;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.5rem;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.category-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  overflow-y: auto;
+}
+
+.category-block {
+  background: #f9f9f9;
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease;
+}
+
+.category-block:hover {
+  background: #f0f0f0;
+}
+
+.category-block h2 {
+  font-size: 1.8rem;
+  color: #444;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.category-block p {
+  font-size: 1rem;
+  color: #555;
+  white-space: pre-line;
+  transition: color 0.3s ease;
+}
+
+/* 🌙 DARK MODE STYLES */
+body.dark-mode .categories-page {
+  background-color: #000000;
+  color: #eeeeee;
+}
+
+body.dark-mode .title {
+  color: #ffffff;
+  border-bottom: 2px solid #555;
+}
+
+body.dark-mode .category-block {
+  background: #1a1a1a;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .category-block:hover {
+  background: #2a2a2a;
+}
+
+body.dark-mode .category-block h2 {
+  color: #f1f1f1;
+}
+
+body.dark-mode .category-block p {
+  color: #cccccc;
+}
+
+/* Scrollbar */
+.category-list::-webkit-scrollbar {
+  width: 6px;
+}
+.category-list::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 10px;
+}
+.category-list::-webkit-scrollbar-track {
+  background: #f2f2f2;
+}
+body.dark-mode .category-list::-webkit-scrollbar-thumb {
+  background: #444;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .categories-page {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .category-block h2 {
+    font-size: 1.4rem;
+  }
+
+  .category-block p {
+    font-size: 0.95rem;
+  }
+}
